@@ -14,13 +14,10 @@ fun main() {
 }
 
 fun fizzBuzz(value: Int): String {
-    return if (value % 3 == 0 && value % 5 == 0) {
-        "fizzbuzz"
-    } else if (value % 3 == 0) {
-        "fizz"
-    } else if (value % 5 == 0) {
-        "buzz"
-    } else {
-        value.toString()
+    return when {
+        value % 15 == 0 -> "fizzbuzz"
+        value % 3 == 0 -> "buzz"
+        value % 5 == 0 -> "fizz"
+        else -> value.toString()
     }
 }
